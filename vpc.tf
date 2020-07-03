@@ -28,7 +28,7 @@ resource "aws_subnet" "cluster" {
     Name                                 = "eks-${terraform.workspace}"
     ManagedBy                            = "Terraform"
     Environment                          = terraform.workspace
-    "kubernetes.io/cluster/eks-tickdata" = "shared"
+    "kubernetes.io/cluster/eks-${terraform.workspace}" = "shared"
   }
 }
 
